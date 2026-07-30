@@ -1,5 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaEnvelope, FaInstagram } from "react-icons/fa";
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Founder", href: "/founder" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function Footer() {
   return (
@@ -105,24 +112,21 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-20 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-          <nav className="flex flex-wrap max-md:flex-col gap-8 text-xl font-semibold">
-            {[
-              "Home",
-              "About Us",
-              "Programs",
-              "Gallery",
-              "Admissions",
-              "Contact Us",
-            ].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="transition hover:text-[#FFD54A]"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
+          import Link from "next/link";
+
+
+
+<nav className="flex flex-wrap gap-8 text-xl font-semibold max-md:flex-col">
+  {navItems.map(({ label, href }) => (
+    <Link
+      key={label}
+      href={href}
+      className="transition hover:text-[#FFD54A]"
+    >
+      {label}
+    </Link>
+  ))}
+</nav>
 
           <p className="text-lg text-white/80">
             © {new Date().getFullYear()}{" "}
