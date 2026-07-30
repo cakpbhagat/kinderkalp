@@ -91,29 +91,10 @@ export default function AdmissionSection() {
 
             {/* Decorations */}
 
-            <img
-              src="/assets/img/element/star-outline.png"
-              alt=""
-              className="absolute -top-2 right-0 w-16 animate-pulse"
-            />
-
-            <img
-              src="/assets/img/element/purple-splash.png"
-              alt=""
-              className="absolute right-0 top-40 w-28"
-            />
-
-            <img
-              src="/assets/img/element/balloons.png"
-              alt=""
-              className="absolute bottom-0 right-2 w-36"
-            />
+            
 
             {/* Floating circles */}
 
-            <div className="absolute left-8 top-24 h-5 w-5 rounded-full border-2 border-violet-500" />
-
-            <div className="absolute left-20 top-48 h-7 w-7 rounded-full bg-violet-500" />
           </div>
         </div>
       </div>

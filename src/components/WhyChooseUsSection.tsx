@@ -71,35 +71,19 @@ export default function WhyChooseSection() {
 
           {/* rainbow */}
 
-          <img
-            src="/assets/img/element/rainbow.png"
-            className="absolute bottom-6 right-8 w-40"
-            alt=""
-          />
+          
 
           {/* kite */}
 
-          <img
-            src="/assets/img/element/kite.png"
-            className="absolute -bottom-10 -left-8 w-36"
-            alt=""
-          />
+          
 
           {/* flower */}
 
-          <img
-            src="/assets/img/element/flower.png"
-            className="absolute -top-3 right-8 w-16"
-            alt=""
-          />
+          
 
           {/* alphabet */}
 
-          <img
-            src="/assets/img/element/abc-block.png"
-            className="absolute left-0 top-4 w-20"
-            alt=""
-          />
+          
         </div>
 
         {/* CONTENT */}
