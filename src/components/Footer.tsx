@@ -11,18 +11,15 @@ const navItems = [
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#291e63] text-white">
-      {/* Cloud Divider */}
-      
-
       <div className="relative z-10 mx-auto max-w-7xl px-6 pt-20">
         {/* Top */}
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-xl">
-            <Image 
-            src={"/assets/img/logo/logo.png"}
-            alt="KinderKalp"
-            width={100}
-            height={100}
+            <Image
+              src={"/assets/img/logo/logo.png"}
+              alt="KinderKalp"
+              width={100}
+              height={100}
             />
 
             <p className="mt-4 text-lg leading-6 text-white/90">
@@ -113,21 +110,17 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-20 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           import Link from "next/link";
-
-
-
-<nav className="flex flex-wrap gap-8 text-xl font-semibold max-md:flex-col">
-  {navItems.map(({ label, href }) => (
-    <Link
-      key={label}
-      href={href}
-      className="transition hover:text-[#FFD54A]"
-    >
-      {label}
-    </Link>
-  ))}
-</nav>
-
+          <nav className="flex flex-wrap gap-8 text-xl font-semibold max-md:flex-col">
+            {navItems.map(({ label, href }) => (
+              <Link
+                key={label}
+                href={href}
+                className="transition hover:text-[#FFD54A]"
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
           <p className="text-lg text-white/80">
             © {new Date().getFullYear()}{" "}
             <span className="font-semibold text-[#FFD54A]">
@@ -144,8 +137,6 @@ export default function Footer() {
         alt=""
         className="mt-16 w-full"
       />
-
-      
     </footer>
   );
 }
