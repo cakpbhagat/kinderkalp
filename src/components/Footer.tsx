@@ -5,11 +5,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#291e63] text-white">
       {/* Cloud Divider */}
-      <img
-        src="/assets/img/footer/cloud-divider.png"
-        alt=""
-        className="absolute left-0 top-0 w-full translate-y-[-98%]"
-      />
+      
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 pt-20">
         {/* Top */}
@@ -145,30 +141,7 @@ export default function Footer() {
         className="mt-16 w-full"
       />
 
-      {/* Decorations */}
-      <img
-        src="/assets/img/footer/rainbow.png"
-        alt=""
-        className="absolute bottom-28 left-10 w-40 lg:w-48"
-      />
-
-      <img
-        src="/assets/img/footer/girl.png"
-        alt=""
-        className="absolute bottom-0 left-1/4 w-32 lg:w-40"
-      />
-
-      <img
-        src="/assets/img/footer/horse.png"
-        alt=""
-        className="absolute bottom-0 right-1/4 w-40 lg:w-48"
-      />
-
-      <img
-        src="/assets/img/footer/balloon.png"
-        alt=""
-        className="absolute right-10 top-80 w-36 lg:w-44"
-      />
+      
     </footer>
   );
 }
