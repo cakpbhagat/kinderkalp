@@ -109,7 +109,6 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-20 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-          import Link from "next/link";
           <nav className="flex flex-wrap gap-8 text-xl font-semibold max-md:flex-col">
             {navItems.map(({ label, href }) => (
               <Link
