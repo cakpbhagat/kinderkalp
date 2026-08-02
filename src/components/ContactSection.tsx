@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaInstagram } from "react-icons/fa";
 
-interface FormData {
+interface ContactFormData {
   name: string;
   email: string;
   phone: string;
@@ -13,7 +13,7 @@ interface FormData {
 export default function ContactSection() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     phone: "",
@@ -29,22 +29,37 @@ export default function ContactSection() {
     }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // TODO:
-    // Connect EmailJS / Formspree / Backend API here
+    try {
+      const params = new URLSearchParams({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      });
 
-    setFormSubmitted(true);
+      await fetch("https://script.google.com/macros/s/AKfycby2IdanvFvBow6NWhTzmArJAWPMPnnpul5lR5_gnmKt8erAI1Yit8vyBPijJhpFLtB4mA/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: params,
+      });
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+      setFormSubmitted(true);
 
-    setTimeout(() => setFormSubmitted(false), 5000);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+      setTimeout(() => setFormSubmitted(false), 5000);
+    } catch (error) {
+      console.error(error);
+      alert("Unable to send message. Please try again.");
+    }
   };
 
   return (
@@ -87,7 +102,6 @@ export default function ContactSection() {
                 value={formData.email}
                 onChange={handleFormChange}
                 placeholder="Email Address"
-                required
                 className="rounded-2xl border border-slate-200 bg-white px-6 py-4 outline-none transition focus:border-[#6552E8]"
               />
             </div>
@@ -98,6 +112,7 @@ export default function ContactSection() {
               value={formData.phone}
               onChange={handleFormChange}
               placeholder="Phone Number"
+              required
               className="w-full rounded-2xl border border-slate-200 bg-white px-6 py-4 outline-none transition focus:border-[#6552E8]"
             />
 
@@ -107,7 +122,6 @@ export default function ContactSection() {
               value={formData.message}
               onChange={handleFormChange}
               placeholder="Type your message..."
-              required
               className="w-full rounded-2xl border border-slate-200 bg-white px-6 py-4 outline-none transition focus:border-[#6552E8]"
             />
 
