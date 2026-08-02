@@ -37,7 +37,7 @@ export default function TopBar() {
 
         {/* Center */}
         <div className="max-xl:hidden text-center font-semibold text-base">
-          <span>A Safe, Joyful Place for Early Childhood kinez - </span>
+          <span>A Safe, Joyful Place for Little Learners — </span>
 
           <Link
             href="/about"

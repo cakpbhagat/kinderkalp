@@ -6,11 +6,11 @@ import { FaChevronDown } from "react-icons/fa";
 const FAQS = [
   {
     q: "What age group do you accept?",
-    a: "We welcome children from playgroup through pre-primary, typically between 1.5 and 6 years old. Reach out and we'll help you find the right program for your child's age.",
+    a: "We welcome children from Playgroup through Pre-Primary, typically between 1.5 and 6 years old of age. Reach out to us and we'll help you find the right program for your child's age and stage of development.",
   },
   {
     q: "Can we schedule a trial class before enrolling?",
-    a: "Yes! We warmly welcome families to visit and experience a trial session so your child and you can get a feel for our classrooms before deciding.",
+    a: "Yes! We warmly welcome families to visit us and experience a trial session, so that both you and your child can get a feel for our classrooms and experience our learning environment before making a decision.",
   },
   {
     q: "When do admissions open?",
